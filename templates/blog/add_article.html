@@ -1,0 +1,57 @@
+{% extends 'index.html'%}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+
+
+<section id="home" class="services ">
+    <div class="container bg-white shadow p-3 py-5">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3 mb-5 text-center"> Add Blog Post </h4>
+
+          <form method="POST" action="{% url 'add-article' %}" class="row g-3 align-center">
+            
+            {% csrf_token %}
+
+
+            <div class="col-lg-6 col-md mb-3">
+              <label for="exampleFormControlInput1" class="form-label"> Title </label>
+              {% render_field form.title placeholder="Blog Title" class='shadow form-control form-control-lg col-lg-3 mb-3' %}
+            </div>
+            <div class="col-lg-6 col-md mb-3">
+              <label for="exampleFormControlInput1" class="form-label"> Category </label>
+              {% render_field form.category placeholder="Title Tag" class='shadow form-control form-control-lg col-lg-3 mb-3' %}
+            </div>
+            <div class="col-lg-6 mb-3">
+              <label for="exampleFormControlInput1" class="form-label"> Author </label>
+              {% render_field form.author placeholder="Author" class='shadow form-control form-control-lg col-lg-3 mb-3' %}
+            </div>
+            <div class="col-sm-6 input-group mb-3">
+              <input type="file" class="form-control" id="inputGroupFile02">
+              <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div> 
+
+            <div class="col-sm-6"></div>
+              <label for="exampleFormControlInput1" class="form-label"> Blog Title Tag </label>
+              {% render_field form.title_tag placeholder="Title Tag" class='shadow form-control form-control-lg col-lg-3 mb-3' %}
+            </div>
+
+            <div class="col-sm-12 mb-3 py-3"> 
+              <label for="exampleFormControlInput1" class="form-label"> Author </label>
+              {% render_field form.content placeholder="Author" class='shadow form-control form-control-lg col-lg-3 mb-3' %}
+            </div>
+
+            <div class="text-center d-grid mt-1">
+                <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+            </div>
+          </form>
+        </div>
+      </div>
+
+</section>
+
+
+
+{% endblock %}

@@ -1,0 +1,145 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block title %} About Us {% endblock %}
+
+{% block content %}
+
+
+<section id="home" class="about-us">
+    <div class="container">
+        <div class="row text-white text-center">
+            <h1 class="display-3 fw-bold">About Us</h1>
+            <div class="heading-lineb mb-1"></div>
+          </div>
+        <!-- START THE DESCRIPTION CONTENT  -->
+          <div class="row">
+            <div class="mx-auto">
+              <div class="p-4">
+                <h2 class="fw-bold text-white text-capitalize text-center">
+                  As Inhloso Yetfu Digital we help our clients achieve their business goals
+                  through the development of custom software, data analytics and business intelligence.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <!-- <section id="about-us">
+      <div class="details">
+        <div class="background-image">
+          <img src="{% static 'images/services/web-dev-1.jpg' %}" alt="Background Image">
+      
+          <div class="container">
+              <h1>About Us</h1>
+      
+      
+      </div>
+    </div>
+        </div>
+          
+    </section> -->
+
+<section class="py-5">
+        <div class="row text-center py-2">
+        <h2 class="mb-3"> Our Company </h2>
+        <div class="heading-line mb-3"></div>
+      </div>
+      <div class="card-group text-center">
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-brands fa-digital-ocean fa-4x"></i>
+            <h5 class="card-title py-3"> Company Purpose </h5>
+            <p class="card-text"> Helping businesses become more effective and profitable through the use 
+                of the available digital tools.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-regular fa-lightbulb fa-4x"></i>
+            <h5 class="card-title py-3"> 
+                Company Mission 
+            </h5>
+            <p class="card-text"> Contributing to the knowledge economy through the creation of cutting edge and innovative 
+                digital solutions. 
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <i class="fa-solid fa-microchip fa-4x"></i>
+            <h5 class="card-title py-3">
+                Company Vision </h5>
+            <p class="card-text"> 
+                Becoming a reliable technology  innovation partner through our drive to manage, analyze, architect, 
+                design, test, engineer, scale and deliver for our clients and their products. </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+<!-- FEATURE SECTION -->
+
+<section id="about-us">
+  <div class="container">
+      <div class="row py-5">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 px-5">
+              <h1 style="color:rgb(21,21,100);" class="mt-1"> Our Mission</h1>
+              <p class="text-dark">
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+               Nihil vitae voluptates deleniti repudiandae veritatis! 
+               <br/><br/>
+               Tempore dolorem quis officiis eum culpa eligendi, rerum odit! Voluptas obcaecati unde, eos fuga repellat aperiam atque fugiat architecto dicta debitis?
+               Aut repellendus, numquam quasi error a facere magnam! Modi tenetur, nobis accusantium unde quae vitae?
+              </p>
+  
+            <a class="about-us-btn" href="{% url 'services' %}"> Our Services </a>
+              
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+            <div class="image-container">
+              <img src="{% static 'images/services/web-dev-1.jpg' %}" alt="marketing illustration" class="img-fluid">
+            </div>
+          </div>
+        </div>
+  </div>
+
+  <div class="container-fluid py-3">
+      <!-- SERVICE INTRODUCTION -->
+      <div class="heading py-2">
+        <h1 style="background-color: #1254ab; padding: 2rem;" class="fw-bold text-center text-white"> More About Inhloso Yetfu Digital 
+          <i class="fa-brands fa-digital-ocean px-3"></i>
+        </h1>
+      </div>
+      </div>
+  
+      <div class="container">
+          <div class="row py-5">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 text-end">
+              <div class="image-container">
+                <img src="{% static 'images/services/web-dev-1.jpg' %}" alt="marketing illustration" class="img-fluid">
+              </div>
+            </div>
+              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 px-5">
+                  <h1 style="color:rgb(21,21,100);" class="mt-1"> Our Philosophy </h1>
+                  <p class="text-dark">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                   Nihil vitae voluptates deleniti repudiandae veritatis! 
+                   <br/><br/>
+                   Tempore dolorem quis officiis eum culpa eligendi, rerum odit! Voluptas obcaecati unde, eos fuga repellat aperiam atque fugiat architecto dicta debitis?
+                   Aut repellendus, numquam quasi error a facere magnam! Modi tenetur, nobis accusantium unde quae vitae?
+                  </p>
+                  
+                  <a class="about-us-btn" href="{% url 'services' %}"> Our Services </a>
+              </div>
+              
+            </div>
+      </div>
+</section>
+
+
+{% endblock %}

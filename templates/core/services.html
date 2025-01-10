@@ -1,0 +1,189 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block title %} Services {% endblock %}
+
+{% block content %}
+
+<body>
+  <section id="services" class="services">
+    <div class="container">
+      <div class="row text-center">
+        <div class="services__content">
+          <h1 class="display-3 fw-bold">Our Services</h1>
+        <div class="heading-line mb-1"></div>
+      </div>
+    <!-- START THE DESCRIPTION CONTENT  -->
+      <div class="row pt-2 pb-2 mt-0 mb-3">
+        <div class="col-md-6 border-right">
+          <div class="bg-white p-3">
+            <h2 class="fw-bold text-capitalize text-center">
+              Providing a customized approach to help our clients achieve all their business goals.
+            </h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="bg-white p-4 text-start">
+            <p class="fw-light">
+              Providing exceptional solutions that facilitate your online presence, support your
+              strategy, and accelerate your digital journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+        </div>
+        
+  
+    <!-- START THE CONTENT FOR THE SERVICES  -->
+    <div class="container-fluid py-3">
+      <!-- SERVICE INTRODUCTION -->
+      <div class="service-introduction py-2">
+        <h1 class="display-3 fw-bold text-center text-white"> Software Services </h1>
+      </div>
+      </div>
+      <div class="container py-5">
+        <!-- START THE MARKETING CONTENT  -->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+          <div class="services__content">
+            <div class="icon d-block fas fa-paper-plane"></div>
+            <h3 class="display-3--title mt-1">Web App Development</h3>
+            <p class="lh-lg">
+              Inhloso Yetfu employs best practices and considerable technology expertise to deliver web applications of various complexity: from one-page websites to enterprise software.
+               We do our best to provide products that meet the customers’ expectations and comply with all business requirements. Our full cycle web development services include Web Portals, Analytics Web Apps, Customer Facing Apps, Enteprise Web Apps. 
+            </p>
+            <a role="button" type="button" href="{% url 'contact-us'%}" class="btn rounded-pill btn-rounded border-primary"> Contact Us
+              <span><i class="fas fa-arrow-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+          <div class="image-container">
+            <img src="{% static 'images/services/web-development-1.png' %}" alt="marketing illustration" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <!-- START THE WEB DEVELOPMENT CONTENT  -->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 text-start">
+          <div class="services__pic">
+            <img src="{% static 'images/services/mobile-app-1.png' %}" alt="web development illustration" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+          <div class="services__content">
+            <div class="icon d-block fas fa-code"></div>
+            <h3 class="display-3--title mt-1"> Mobile App. Development </h3>
+            <p class="lh-lg">
+              We are committed to delivering maximum business value, we execute custom mobile software 
+              development projects with precision, innovation, and unparalleled efficiency.
+            </p>
+            <button type="button" class="rounded-pill btn-rounded border-primary">Contact Us
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- START THE CLOUD HOSTING CONTENT  -->
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+          <div class="services__content">
+            <div class="icon d-block fas fa-cloud-upload-alt"></div>
+            <h3 class="display-3--title mt-1"> Desktop Appications </h3>
+            <p class="lh-lg">
+              We excel at creating one-of-a-kind, user-friendly applications for a wide range of industries. 
+              By harnessing the power of cutting-edge programming languages and frameworks, we craft Windows, Mac and Linux 
+              applications that are precisely tailored to our clients’ needs, helping them increase productivity and efficiency.
+            </p>
+            <button type="button" class="rounded-pill btn-rounded border-primary"> Contact Us
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 text-end">
+          <div class="services__pic">
+            <img src="{% static 'images/services/desktop-1.png' %}" alt="cloud hosting illustration" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      </div>
+
+  <!-- START THE CONTENT FOR THE SERVICES  -->
+  <div class="container-fluid py-3">
+    <!-- SERVICE INTRODUCTION -->
+    <div class="service-introduction py-2">
+      <h1 class="display-3 fw-bold text-center text-white"> Data Services </h1>
+    </div>
+    </div>
+    <div class="container py-5">
+      <!-- START THE MARKETING CONTENT  -->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+        <div class="services__content">
+          <div class="icon d-block fas fa-paper-plane"></div>
+          <h3 class="display-3--title mt-1"> Data Analytics Services </h3>
+          <p class="lh-lg">
+            Inhloso Yetfu employs best practices and considerable technology expertise to deliver web applications of various complexity: from one-page websites to enterprise software.
+             We do our best to provide products that meet the customers’ expectations and comply with all business requirements.
+          </p>
+          <button type="button" class="rounded-pill btn-rounded border-primary"> Contact Us
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-4 text-end">
+        <div class="services__pic">
+          <img src="{% static 'images/services/data-analytics-1.png' %}" alt="marketing illustration" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <!-- START THE WEB DEVELOPMENT CONTENT  -->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 text-start">
+        <div class="services__pic">
+          <img src="{% static 'images/services/data-science-1.png' %}" alt="web development illustration" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+        <div class="services__content">
+          <div class="icon d-block fas fa-code"></div>
+          <h3 class="display-3--title mt-1"> Data Science Services </h3>
+          <p class="lh-lg">
+            With advanced analytics, machine learning, and statistical modeling, data science enables 
+            businesses to unlock the immense value hidden within data.
+            Ready to harness its power? Explore our expert data science services and leverage your data to make smart, data-driven decisions.
+          </p>
+          <button type="button" class="rounded-pill btn-rounded border-primary"> Contact Us
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- START THE CLOUD HOSTING CONTENT  -->
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1">
+        <div class="services__content">
+          <div class="icon d-block fas fa-cloud-upload-alt"></div>
+          <h3 class="display-3--title mt-1"> Data Visualisation </h3>
+          <p class="lh-lg">
+            Tired of boring and confusing dashboards? Our data visualization consulting experts can help you tell the stories hidden in your data.
+          </p>
+          <button type="button" class="rounded-pill btn-rounded border-primary"> Contact Us
+            <span><i class="fas fa-arrow-right"></i></span>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 services mt-1 text-end">
+        <div class="services__pic">
+          <img src="{% static 'images/services/data-viz-1.png' %}" alt="cloud hosting illustration" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    </div>
+    
+  </section>
+
+</body>
+  
+
+  {% endblock %}

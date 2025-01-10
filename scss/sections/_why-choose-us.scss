@@ -1,0 +1,157 @@
+.why-choose-us {
+    padding:  2rem 0 5rem 0;
+
+    .card-img-top {
+        width: 100%;
+        height: 150px; /* Adjust height as needed */
+        object-fit: cover; /* Prevents image distortion */
+      }
+
+    &__logo-box {
+        max-width: 100%;
+        height: 3rem;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
+        text-align: center;
+        position: relative;
+
+        img {
+            height: 100%;
+
+            &:hover {
+                filter: grayscale(120);
+            }
+        }
+    }
+}
+
+#why-choose-us .why-choose-us .row .title .h4 {
+    text-align: center;
+    margin-top: 3px;
+}
+
+#why-choose-us .why-choose-us .container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 30px 15px;
+    color: #333;
+  }
+  
+#why-choose-us .why-choose-us .container .card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.15),
+                inset -5px -5px -5px rgba(255,255,255,0.5),
+                -5px -5px -5px rgba(255,255,255,0.5),
+                -5px -5px -5px rgba(255,255,255,0.5);
+    transition: 0.5s;
+  
+  }
+  
+#why-choose-us .why-choose-us .card:hover {
+    height: 400px;
+  }
+  
+#why-choose-us .why-choose-us .card .box {
+    position: absolute;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background: #333;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: #dceaf7;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: 0.5s;
+  } 
+  
+#why-choose-us .why-choose-us .card .box .content {
+    text-align: center;
+    color: #0000;
+    padding: 20px;
+    transition: 0.5s ;
+  }
+  
+#why-choose-us .why-choose-us .card .box .content h2 {
+    position: absolute;
+    top: -20px;
+    right: 30px;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+    pointer-events: none;
+  }
+  
+  
+#why-choose-us .why-choose-us .card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg,#2fd0d8,rgb(21,21,100));
+  }
+  
+#why-choose-us .why-choose-us .card:hover .content {
+    height: 250px;
+    top: 130px;
+    color: #fff;
+  }
+  
+#why-choose-us .why-choose-us .card:hover .box .content h2 {
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 25%;
+  }
+  
+#why-choose-us .why-choose-us .card:hover .box .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+#why-choose-us .why-choose-us .card .box .content p {
+    color: #333;
+    font-weight: 300;
+    font-size: 1.05em;
+    z-index: 1;
+    transition: 0.5s;
+  }
+
+#why-choose-us .why-choose-us .card:hover .box .content p {
+    color: #fff;
+  }
+  
+#why-choose-us .why-choose-us .card .box .content a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border-radius: 20px;
+    background: rgb(21,21,100);
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+#why-choose-us .why-choose-us .card:hover .box .content a {
+   background: #fdc93b; 
+  }

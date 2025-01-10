@@ -1,0 +1,138 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro-section {
+    @include gradient;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.intros {
+
+
+    .video-box {
+        position: relative;
+
+
+        a {
+            // @include absoluteCenter;
+
+            span {
+
+
+                i {
+
+                    font-size: 6rem;
+                    color: $secondary;
+
+                }
+            }
+        }
+    }
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border: 0.55rem solid $white;
+    border-radius: 50%;
+    animation: pulse-border 1.5s linear infinite;
+
+    &--border-1 {
+        animation-delay: 1s;
+    }
+    &--border-2 {
+        animation-delay: 1.5s;
+    }
+}
+
+#classes .container {
+  padding: 30px 15px;
+  color: #333;
+}
+
+#classes .card {
+  position: relative;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.15),
+              inset -5px -5px -5px rgba(255,255,255,0.5),
+              -5px -5px -5px rgba(255,255,255,0.5),
+              -5px -5px -5px rgba(255,255,255,0.5);
+  transition: 0.5s;
+}
+
+#classes .card:hover {
+  transform: scale(1.05);
+}
+
+#classes .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #dceaf7;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: 0.5s;
+} 
+
+#classes .box .content {
+  text-align: center;
+  color: #000;
+  padding: 20px;
+  transition: 0.5s;
+}
+
+#classes .box .content h2 {
+  // font-size: 2.2em;
+  // font-weight: 700;
+  // top: -20px;
+  // color: #333;
+  // transition: 0.5s;
+  position: absolute; 
+  top: -20px;
+  text-align: center; 
+  // right: 30px; 
+  font-size: 2.2em; 
+  font-weight: 700; 
+  color: rgba(0, 0, 0, 0); 
+  transition: 0.5s; 
+  pointer-events: none;
+}
+
+#classes .card:hover .box {
+  transform: translateY(-10px);
+  background: linear-gradient(45deg,#2fd0d8,rgb(21,21,100));
+}
+
+#classes .card:hover .content {
+  color: #fff;
+}
+
+#classes .card:hover .box .content h2 {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 25%;
+}
+
+#classes .box .content a {
+  display: inline-block;
+  padding: 8px 20px;
+  color: #fff;
+  border-radius: 20px;
+  background: rgb(21,21,100);
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#classes .card:hover .box .content a {
+  background: #fdc93b;
+}

@@ -1,0 +1,23 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.intro-services {
+  padding: 4rem 0;
+  background-color: $gray-200;
+
+  &__content {
+      padding: 1rem;
+      margin-top: 5rem;
+  }
+}
+
+.card-service {
+  height: 550px;
+  overflow: hidden;
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto; /* For a 16:9 aspect ratio */
+    object-fit: cover; /* Adjust the height as needed */
+  }

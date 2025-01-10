@@ -1,0 +1,50 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+<section id="blog">
+    <div class="background-image">
+        <img src="{% static 'images/services/web-dev-1.jpg' %}" alt="Background Image">
+    
+        <div class="container">
+            <h1>About Us</h1>
+    
+    
+    </div>
+</div>
+</section>
+
+<section id="blog-container">
+    <div class="blogs">
+        <div class="post">
+            <ul>
+                {% for post in object_list %}
+                <li>
+                    <img src="{% static 'images/blog/dt-1.jpg' %}" alt="Post Image">
+                <h3> {{post.title }}</h3>
+                <p>
+                    {{post.content | truncatewords:30}}
+                </p>  
+                <a href="{% url 'article-detail' post.pk %}" class="blue"> Read More </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+    </div>
+    
+
+    <div class="cate">
+        <h2> Categories </h2>
+        {% for category in categories %}
+          <ul> 
+              <li><a href="#">{{ category.name }}</a></li>
+            
+          </ul>
+        {% endfor %}
+      </div> 
+</section>
+        
+
+{% endblock %}

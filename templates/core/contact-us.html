@@ -1,0 +1,98 @@
+{% extends 'index.html'%}
+{% load static %}
+{% block title %} Conact Us {% endblock %}
+
+{% block content %}
+
+<!-- CONTACT US SECTION -->
+
+<section id="contact-us" class="contact-us">
+    <div class="container">
+        <div class="row text-center">
+            <div class="contact-us__content">
+                <h1 class="display-3 fw-bold text-capitalize"> Contact Us</h1>
+            <p class="lh-lg">
+              Thank you for considering our services.   
+            </p>
+        </div>
+        
+    </div>
+        
+<!-- START CALL TO ACTION CONTENT -->
+        
+<div class="row text-white">
+    <div class="col-12 col-lg-6 gradient shadow p-3">
+        <div class="cta-info w-100">
+            <h4 class="display-4 fw-bold"> Contact Us</h4>
+            <p class="lh-lg">
+                Our team would love to hear from you.
+                Please provide your contact details and we will get back to you promptly.<br/><br/></p>
+                
+
+                <h6> Eswatini Wing</h6>
+                <p>
+                  Phone: (+268) 7638 6526<br/>
+                WhatsApp: (+268) 7860 5173<br/>
+                Email: inhlosoyetfu@gmail.com<br/>
+                <br/>
+                </p>
+                <h6> South African Wing </h6>
+                <p>
+                Phone: (+27) 768 865 7406<br/>
+                WhatsApp: (+27) 768 865 7406<br/>
+                Email: bafanathwala@gmail.com<br/>
+            </p><br/>
+            <h3 class="display-3--brief">What will be the next step?</h3>
+          <ul class="cta-info__list">
+            <li>
+                <i class="fa-solid fa-circle-check"></i>  We'll prepare the proposal.</li>
+            <li> <i class="fa-solid fa-circle-check"></i> we'll discuss it together.</li>
+            <li> <i class="fa-solid fa-circle-check"></i> let's start the discussion.</li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-6 bg-white shadow p-3">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3--title mb-5">start your project</h4>
+
+          {% if messages %}
+  
+            {% for message in messages %}
+  
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+  
+            {% endfor%}
+          
+            {% endif %}
+
+          <form method="POST" action="{% url 'contact-us' %}" class="row">
+            {% csrf_token %}
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="First Name" name="first_name" class="shadow form-control form-control-lg">
+            </div>
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="Last Name" name="last_name" class="shadow form-control form-control-lg">
+            </div>
+            <div class="col-lg-12 mb-3">
+              <input type="email" placeholder="email address" name="email" class="shadow form-control form-control-lg">
+            </div>
+            <div class="col-lg-12 mb-3">
+              <textarea name="message" placeholder="message" name="message" rows="8" class="shadow form-control form-control-lg"></textarea>
+            </div>
+            <div class="text-center d-grid mt-1">
+              <input type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
+              <i class="fas fa-paper-plane"></i> Submit
+                
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+</div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,92 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.menu{
+    @include gradient;
+
+    li {
+        padding: 0 0.7rem;
+    }
+
+    a {
+        color: $white ;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+}
+
+.navbar {
+    .nav-item:hover {
+        .nav-link::before {
+            width: 100%;
+        }
+    }
+}
+
+
+.nav-item .dropdown {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    // content: '+';
+    vertical-align: center;
+    margin-left: 5px;
+
+}
+
+.dropdown-menu {
+    position: absolute;
+    padding: 5px;
+    z-index: 9;
+    // display: none;
+
+}
+
+
+.dropdown-menu {
+    display: block;
+    width: 220px;
+    padding: 15px 0 15px 0;
+    border-radius: 10px;
+    background-color: $blue-light;
+    margin-left: -52px;
+}
+
+.dropdown-menu li {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+.dropdown-item::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: $blue-dark;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.dropdown-item:hover::before {
+    width: 100%;
+    background: $blue-dark;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #fff;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+}

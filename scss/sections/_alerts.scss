@@ -1,0 +1,6 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.alert-container {
+    padding-top: 150px; /* Adjust this value based on the height of your navbar */
+}

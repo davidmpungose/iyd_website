@@ -1,0 +1,111 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.about-us {
+    @include gradient;
+    padding: 10rem 0 0 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+#about-us .details{
+    position: relative;
+    padding: 20px;
+
+    .background-image {
+        position: relative;
+        width: 100%;
+        height: 60vh;
+    }
+
+    .background-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .background-image .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff; /* Or any other color you prefer */
+        text-align: center;
+        z-index: 3;
+    }
+
+    .background-image::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(9,5,54,0.3), rgba(5,4,46,0.7)); /* Adjust gradient colors and opacity as needed */
+        z-index: 2; /* Ensure the gradient is above the image but below the text */
+      }
+      
+
+}
+
+.key-info {
+
+
+    .video-box {
+        position: relative;
+
+
+        a {
+            // @include absoluteCenter;
+
+            span {
+
+
+                i {
+
+                    font-size: 6rem;
+                    color: $secondary;
+
+                }
+            }
+        }
+    }
+}
+
+.border-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6rem;
+    height: 6rem;
+    border: 0.55rem solid $white;
+    border-radius: 50%;
+    animation: pulse-border 1.5s linear infinite;
+
+    &--border-1 {
+        animation-delay: 1s;
+    }
+    &--border-2 {
+        animation-delay: 1.5s;
+    }
+}
+
+#about-us .about-us-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border-radius: 20px;
+    background: #1254ab;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  #about-us .about-us-btn:hover {
+    background: #fdc93b;
+  }
