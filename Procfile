@@ -1,0 +1,1 @@
+web gunicorn boots.wsgi:application --log-file -
