@@ -86,27 +86,27 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.mysql',
+#          'NAME': os.environ.get('gs3r2478f5zi6jjv'),
+#          'USER': os.environ.get('xiod0zhilujyhr81'),
+#          'PASSWORD': os.environ.get('jx1tj3py8tso727'),
+#          'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+#          'PORT': os.environ.get('3306'),
+#  }
+# }
+
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
-         'NAME': os.environ.get('gs3r2478f5zi6jjv'),
-         'USER': os.environ.get('xiod0zhilujyhr81'),
-         'PASSWORD': os.environ.get('jx1tj3py8tso727'),
-         'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
-         'PORT': os.environ.get('3306'),
- }
+         'NAME': 'boots_website',
+         'USER': 'root',
+         'PASSWORD': 'SSD695BHsd@',
+         'HOST': 'localhost',
+         'PORT': '3306'
+     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'boots_website',
-#         'USER': 'root',
-#         'PASSWORD': 'SSD695BHsd@',
-#         'HOST': 'localhost',
-#         'PORT': '3306'
-#     }
-# }
 
 
 # Password validation
