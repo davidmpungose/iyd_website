@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.mysql',
-          'NAME': os.environ.get('gs3r2478f5zi6jjv'),
+          'NAME': os.environ.get('mysql://xiod0zhilujyhr8l:jx1tj3pyt8tso727@d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/gs3r2478f5zi6jjv'),
           'USER': os.environ.get('xiod0zhilujyhr81'),
           'PASSWORD': os.environ.get('jx1tj3py8tso727'),
           'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
