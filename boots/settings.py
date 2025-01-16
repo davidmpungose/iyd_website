@@ -59,6 +59,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
 ROOT_URLCONF = 'boots.urls'
@@ -86,15 +87,26 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('gs3r2478f5zi6jjv'),
-        'USER': os.environ.get('xiod0zhilujyhr81'),
-        'PASSWORD': os.environ.get('jx1tj3py8tso727'),
-        'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
-        'PORT': os.environ.get('3306'),
-    }
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': os.environ.get('gs3r2478f5zi6jjv'),
+         'USER': os.environ.get('xiod0zhilujyhr81'),
+         'PASSWORD': os.environ.get('jx1tj3py8tso727'),
+         'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+         'PORT': os.environ.get('3306'),
+ }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'boots_website',
+#         'USER': 'root',
+#         'PASSWORD': 'SSD695BHsd@',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
+#     }
+# }
 
 
 # Password validation
@@ -135,6 +147,8 @@ STATIC_URL = '/assets/'
 
 # Location where Django collects all static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = os.path.join('whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 # Location where we will store our static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
