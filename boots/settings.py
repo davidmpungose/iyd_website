@@ -87,22 +87,22 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    **dj_database_url.config(conn_max_age=600, ssl_require=True)
-    }               
-}
-
-# DATABASES = {
-#       'default': {
-#           'ENGINE': 'django.db.backends.mysql',
-#           'NAME': os.environ.get('gs3r2478f5zi6jjv'),
-#           'USER': os.environ.get('xiod0zhilujyhr8l'),
-#           'PASSWORD': os.environ.get('jx1tj3py8tso727'),
-#           'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
-#           'PORT': os.environ.get('3306'),
-#   }
+# DATABASES = {'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     **dj_database_url.config(conn_max_age=600, ssl_require=True)
+#     }               
 # }
+
+DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': os.environ.get('gs3r2478f5zi6jjv'),
+           'USER': os.environ.get('xiod0zhilujyhr8l'),
+           'PASSWORD': os.environ.get('jx1tj3py8tso727'),
+           'HOST': os.environ.get('d6q8diwwdmy5c9k9.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
+           'PORT': os.environ.get('3306'),
+   }
+}
 
 # DATABASES = {
 #      'default': {
