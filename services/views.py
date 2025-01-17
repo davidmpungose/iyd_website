@@ -8,8 +8,19 @@ from django.contrib import messages
 from .models import BlogPost, BlogCategory
 from .forms import PostForm
 
-def blog_view(request):
-    return render(request, 'blog/blog_plus.html')
+class BlogView(ListView):
+    model = BlogPost
+    template_name = 'blog/blog_plus.html'
+    paginate_by = 5
+
+    def get_queryset(self):
+        return super().get_queryset().order_by('-created_at')
+
+    def get_context_data(self, **kwargs):
+        context = super(BlogView, self).get_context_data(**kwargs)
+        categories = BlogCategory.objects.all()
+        context['categories'] = categories
+        return context
 
 class PostView(ListView):
     model = BlogPost
