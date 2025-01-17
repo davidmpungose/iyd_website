@@ -3,6 +3,7 @@
 {% block title %} Blog {% endblock %}
 
 {% block content %}
+
 <section id="blog">
     <div class="background-image">
         <img src="{% static 'images/services/web-dev-1.jpg' %}" alt="Background Image">
@@ -15,36 +16,59 @@
 </div>
 </section>
 
+</section>
+
 <section id="blog-container">
     <div class="blogs">
         <div class="post">
-            <ul>
-                {% for post in object_list %}
-                <li>
-                    <img src="{% static 'images/blog/dt-1.jpg' %}" alt="Post Image">
-                <h3> {{post.title }}</h3>
-                <p>
-                    {{post.content | truncatewords:30}}
-                </p>  
-                <a href="{% url 'article-detail' post.pk %}" class="blue"> Read More </a>
-                </li>
-                {% endfor %}
-            </ul>
+            <img src="{% static 'images/services/web-dev-2.jpg' %}" alt="">
+            <h3> Website Development for Small Businesses</h3>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Recusandae voluptas suscipit ab nulla sapiente iste natus odit exercitationem, consectetur, cum rem iure expedita,
+                repellendus nobis ipsa quos officia laudantium nisi totam soluta! Provident, laudantium at?</p>
+        
+            <a class="blue" href="#"> Read More </a>
+        
+        </div>
+        <div class="post">
+            <img src="{% static 'images/services/web-dev-2.jpg' %}" alt="">
+            <h3> Website Development for Small Businesses</h3>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Recusandae voluptas suscipit ab nulla sapiente iste natus odit exercitationem, consectetur, cum rem iure expedita,
+                repellendus nobis ipsa quos officia laudantium nisi totam soluta! Provident, laudantium at?</p>
+        
+            <a class="blue" href="#"> Read More </a>
+        
+        </div>
+        <div class="post">
+            <img src="{% static 'images/services/web-dev-2.jpg' %}" alt="">
+            <h3> Website Development for Small Businesses</h3>
+            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Recusandae voluptas suscipit ab nulla sapiente iste natus odit exercitationem, consectetur, cum rem iure expedita,
+                repellendus nobis ipsa quos officia laudantium nisi totam soluta! Provident, laudantium at?</p>
+        
+            <a class="blue" href="#"> Read More </a>
+        
         </div>
         
     </div>
-    
-
     <div class="cate">
         <h2> Categories </h2>
-        {% for category in categories %}
-          <ul> 
-              <li><a href="#">{{ category.name }}</a></li>
-            
-          </ul>
-        {% endfor %}
-      </div> 
+        <hr>
+        <a href="#"> Small Businesses </a>
+        <hr>
+        <a href="#"> Digital Transformation </a>
+        <hr>
+        <a href="#"> Data Analytics </a>
+        <hr>
+        <a href="#"> Digital Marketing </a>
+        <hr>
+        <a href="#"> Medium Sized Businesses </a>
+        <hr>
+    </div>
 </section>
-        
+
+
+
 
 {% endblock %}
