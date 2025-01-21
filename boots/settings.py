@@ -93,23 +93,23 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 #     }               
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        **dj_database_url.config(conn_max_age=600) 
-    }
-}
-
 # DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.mysql',
-#          'NAME': 'boots_website',
-#          'USER': 'root',
-#          'PASSWORD': 'SSD695BHsd@',
-#          'HOST': 'localhost',
-#          'PORT': '3306'
-#      }
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         **dj_database_url.config(conn_max_age=600) 
+#     }
 # }
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         'NAME': 'boots_website',
+         'USER': 'root',
+         'PASSWORD': 'SSD695BHsd@',
+         'HOST': 'localhost',
+         'PORT': '3306'
+     }
+}
 
 
 # Password validation
