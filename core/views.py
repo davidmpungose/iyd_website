@@ -34,6 +34,9 @@ def contact_us(request):
             try:
                 send_mail(
                     subject,
+                    first_name,
+                    last_name,
+                    from_email,
                     message,
                     from_email,
                     ["inhlosoyetfu@gmail.com"],
