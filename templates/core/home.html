@@ -16,7 +16,7 @@
             We help small and medium sized businesses to begin and improve their journey of digital transformation in order to improve operational effiency and the overall customer experience.
           </span>
         </h1>
-        <a type="button" href="{% url 'contact-us'%}" class="btn rounded-pill btn-rounded"> Contact Us
+        <a type="button" href="{% url 'contact-us'%}" class="btn rounded-pill btn-rounded"> Schedule a Call
           <span><i class="fas fa-arrow-right"></i></span>
         </a>
       </div>
@@ -25,6 +25,88 @@
       <div class="col-md-6 intro">
         <div class="video-box">
           <img src="{% static 'images/intro-1.png' %}" alt="video illustration" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- START OUR SERVICES SECTION -->
+<section id="intro-services" class="intro-services">
+  <div class="container">
+    <div class="row text-center mt-5">
+      <h1 class="display-3 fw-bold text-capitalize"> Our Services </h1>
+      <div class="heading-line"></div>
+      <p>
+        Let us help your business harness the power of digital.
+        Discover our services, from custom software development and data analytics to business intelligence.
+      </p>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <div class="card-service">
+          <img src="{% static 'images/services/web-development-1.png' %}" class="card-img-top" alt="Service 1">
+          <div class="card-body">
+            <h5 class="card-title">Web & Mobile App Development Services </h5>
+            <p class="card-text"> We are dedicated to developing exceptional web applications and custom business software for our clients. </p>  
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-service">
+          <img src="{% static 'images/services/data-analytics-1.png' %}" class="card-img-top" alt="Service 2">
+          <div class="card-body">
+            <h5 class="card-title"> Data Services </h5>
+            <p class="card-text"> Helping you gain a deeper insigt into your business and customers' behaviour.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-service">
+          <img src="{% static 'images/services/business-intelligence-1.png' %}" class="card-img-top" alt="Service 3">
+          <div class="card-body">
+            <h5 class="card-title"> Business Intelligence </h5>
+            <p class="card-text"> Helping you gain a deeper insigt into your business and customers' behaviour. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2 col-6 mx-auto py-5">
+      <a href="{% url 'services'%}" class="btn btn-primary" type="button"> For More Info </a>
+      <a href="{% url 'contact-us' %}" class="btn btn-primary" type="button"> Contact Us </a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="home" class="intro-section">
+  <div class="container">
+    <div class="row align-items-center text-white">
+      <div class="col-md-6 intro">
+        <h1 class="display-2">
+          <span class="display-2--intro">
+            Company Values
+          </span>
+          <span class="display-2--description lh-base">
+            We understand how most small and medium sized businesses lack the expertise to begin utilizing the modern digital tools. We
+            are committed to making the digital shift as seemless as possible for our clients.
+          </span>
+        </h1>
+        <a type="button" href="{% url 'contact-us'%}" class="btn rounded-pill btn-rounded"> Schedule A Call
+          <span><i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+
+      <!-- ILLUSTRATION START -->
+      <div class="col-md-6 intro">
+        <div class="video-box">
+          <img src="{% static 'images/intro-3.png' %}" alt="video illustration" class="img-fluid">
         </div>
       </div>
     </div>
@@ -134,84 +216,6 @@
   </div>
 </section> -->
 
-<section id="home" class="intro-section">
-  <div class="container">
-    <div class="row align-items-center text-white">
-      <div class="col-md-6 intro">
-        <h1 class="display-2">
-          <span class="display-2--intro">
-            Inhloso Yetfu Digital
-          </span>
-          <span class="display-2--description lh-base">
-            We help small and medium sized businesses to begin and improve their journey of digital transformation in order to improve operational effiency and the overall customer experience.
-          </span>
-        </h1>
-        <a type="button" href="{% url 'contact-us'%}" class="btn rounded-pill btn-rounded"> Contact Us
-          <span><i class="fas fa-arrow-right"></i></span>
-        </a>
-      </div>
 
-      <!-- ILLUSTRATION START -->
-      <div class="col-md-6 intro">
-        <div class="video-box">
-          <img src="{% static 'images/intro-3.png' %}" alt="video illustration" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- START OUR SERVICES SECTION -->
-<section id="intro-services" class="intro-services">
-  <div class="container">
-    <div class="row text-center mt-5">
-      <h1 class="display-3 fw-bold text-capitalize"> Our Services </h1>
-      <div class="heading-line"></div>
-      <p>
-        Let us help your business harness the power of digital.
-        Discover our services, from custom software development and data analytics to business intelligence.
-      </p>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <div class="card-service">
-          <img src="{% static 'images/services/web-development-1.png' %}" class="card-img-top" alt="Service 1">
-          <div class="card-body">
-            <h5 class="card-title">Software Development Services </h5>
-            <p class="card-text"> We are dedicated to developing exceptional web applications and custom business software for our clients. </p>  
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-service">
-          <img src="{% static 'images/services/data-analytics-1.png' %}" class="card-img-top" alt="Service 2">
-          <div class="card-body">
-            <h5 class="card-title"> Data Services </h5>
-            <p class="card-text"> Helping you gain a deeper insigt into your business and customers' behaviour.
-
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-service">
-          <img src="{% static 'images/services/business-intelligence-1.png' %}" class="card-img-top" alt="Service 3">
-          <div class="card-body">
-            <h5 class="card-title"> Business Intelligence </h5>
-            <p class="card-text"> Helping you gain a deeper insigt into your business and customers' behaviour. </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="d-grid gap-2 col-6 mx-auto py-5">
-      <a href="{% url 'services'%}" class="btn btn-primary" type="button"> For More Info </a>
-      <a href="{% url 'contact-us' %}" class="btn btn-primary" type="button"> Contact Us </a>
-    </div>
-
-  </div>
-</section>
 
 {% endblock %}
