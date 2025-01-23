@@ -162,3 +162,407 @@
       color: rgb(21,21,100);
     }
   }
+
+  // UNDER CONSTRUCTION STYLES
+
+* {
+    margin: 0;
+    padding: 0;
+    // font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+ }
+
+// nav a {
+//     text-decoration: none;
+// }
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, rgba(2,76,197,0.65), rgba(9, 82, 228, 0.65)), url(assets/images/services/web-dev-2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+    text-align: center;
+     color: #fff;
+}
+
+// nav {
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between; 
+// }
+
+// nav img {
+//   height: 100%;
+//   width: 100%;
+// }
+
+
+// .logo {
+//     width: 140px;
+//     cursor: pointer;
+
+// }
+
+.blog-btn {
+   background: linear-gradient(#024cc5, #09b9e4);
+   color: #fff;
+   font-size: 16px;
+   padding: 16px 30px;
+   border-radius: 30px;
+   border: 0;
+   outline: 0;
+   cursor: pointer;
+}
+
+.content {
+    margin: 15% auto 0;
+}
+
+.content h1 {
+    font-size: 65px;
+    font-weight: 400;
+}
+
+.content h1 span {
+    font-weight: 700;
+}
+
+form {
+    width: 90%;
+    max-width: 600px;
+    height: 65px;
+    background: #fff;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+form input {
+    flex: 1;
+    width: 100%;
+    padding: 20px 30px;
+    /* margin: 0 20px; */
+    font-size: 16px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+form .btn {
+    padding: 0;
+    width: 150px;
+    height: 65px;
+    border-radius: 31px;
+     
+}
+
+form input::placeholder {
+    font-size: 16px;
+}
+
+.links a {
+    color: #fff;
+
+}
+
+.links i {
+    font-size: 1rem;
+    margin-left: 1rem;
+
+}
+
+.fa-brands {
+    color: #fff; /* Change the icon color */
+    font-size: 250px; /* Change the icon size */
+    margin: 10px; /* Add margin between icons */
+  }
+
+
+/* BOOK APPOINTMENT  */
+
+
+/* BOOK APPOINTMENT  */
+
+#contact-us {
+  margin: auto;
+  background-color: #4060b3;
+  padding: 4rem 0;
+}
+
+#contact-us .contact {
+  padding: 5rem 0 2.5rem 0;
+}
+
+#contact-us .contact > .text{
+  width: 70%;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.contact-us-heading {
+  text-align: center;
+  padding: 1.4rem 0;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.contact .contact-us-row {
+  margin: 1rem 0;
+  display: flex;
+}
+
+.col-left, .col-right {
+  flex: 1;
+}
+
+.contact .contact-us-row > div {
+  margin: 2.5rem;
+  padding: 2rem 0;
+}
+
+.contact-us-row {
+  /* max-width: 1200px;
+  width: 100%; */
+  /* margin: 2.5rem 0;
+  padding: 2rem 0; */
+  /* gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr; */
+}
+
+.contact-us-row .col-left h2{
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.lg-title {
+  font-size: 1.8rem;
+}
+
+.contact-us-row .col-left p {
+  color: #fff;
+}
+
+.contact-us-row .contact-info {
+  margin: 1rem 0;
+  color: #fff;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center; 
+}
+
+.contact-us-row .contact-info > span {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-right: 1.2rem;
+}
+
+.contact-us-row .contact-info span i {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-right: 1.2rem;
+}
+
+.contact-us-form .form-control {
+  border: 1px solid rgba(0,0,0,0.1);
+  color: #000;
+  display: block;
+  margin: 1.6rem auto;
+  margin-left: 0;
+}
+
+.contact-us-row .contact-info h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-us-row .contact-info h3 span {
+  text-transform: uppercase;
+  font-size: 1.05rem;
+}
+
+.contact-us-row .contact-social-links {
+  display: flex;
+}
+
+.contact-us-row .contact-social-links a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #4060b3;
+  margin: 0 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  margin-bottom: 5px;
+}
+
+.contact-us-row .contact-social-links a:first-child {
+  margin-left: 0;
+}
+
+.contact-us-row .contact-social-links a:hover {
+  background: #4060b3;
+  color: #fff;
+
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  outline: 0;
+  caret-color: #535353;
+  box-sizing: border-box;
+}
+
+.contact-us-form .btn {
+  display: block;
+  margin: auto;
+  margin-left: 0;
+
+}
+
+.contact-us-btn {
+  height: 45px;
+  padding: 0px 10px;
+  border-radius: 5px;
+  max-width: 200px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #014dd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-row input:focus .contact-form textarea:focus {
+  border-color: #014dd5;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  text-transform: uppercase;
+}
+
+/* .contact-form .form-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  
+  .contact-us-row {
+    margin: 0;
+  }
+} */
+
+.contact-us-row {
+  margin: auto;
+  max-width: 1200px;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 2rem;
+}
+
+.contact-icon {
+  background-color: #122853;
+  color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 0 1rem;
+  font-size: 1.4rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  margin: 3rem 0;
+}
+
+    
+//   /* Media Queries for Responsive Design */
+//   @media (max-width: 767px) {
+//     /* Hero Section */
+//     .hero {
+//       padding: 20px;
+//       text-align: center;
+//     }
+  
+//     .content h1 {
+//       font-size: 40px;
+//     }
+  
+//     .content h1 span {
+//       font-size: 50px;
+//     }
+  
+//     /* Form Section */
+//     form {
+//         display: none;
+
+//     }
+
+
+//     /* Links Section */
+//     .links {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+//     }
+  
+//     .links a {
+//       margin: 10px;
+//     }
+  
+//     .fa-brands {
+//       font-size: 30px;
+//     }
+//   }
+
+//   /* Media Query for Smaller Screens */
+// @media (max-width: 768px) {
+//   .contact-us-row {
+//     flex-direction: column; /* Stack columns on smaller screens */
+//   }
+
+//   .col-left, .col-right {
+//     flex: 1 0 auto; /* Allow columns to shrink but not grow excessively */
+//   }
+
+//   /* Optional Adjustments for Text and Elements */
+//   .contact-us-heading h2, .contact-info h3 {
+//     font-size: 1.2rem;  /* Adjust heading sizes */
+//   }
+
+//   .contact-form input, .contact-form textarea {
+//     margin-bottom: 1rem;  /* Add spacing between form elements */
+//   }
+// }
