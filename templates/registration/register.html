@@ -1,0 +1,92 @@
+{% extends 'index.html' %}
+{% load widget_tweaks %} 
+{% block title %} Register {% endblock %}
+
+
+ {% block content %} 
+
+<!-- CONTACT US SECTION -->
+
+<section id="contact-us" class="contact-us">
+  <div class="container">
+      <div class="row text-center">
+          <div class="contact-us__content">
+              <h1 class="display-3 fw-bold text-capitalize text-white"> Contact Us</h1>
+          <p class="lh-lg text-white">
+            Thank you for considering our services.   
+          </p>
+      </div>
+      
+  </div>
+      
+<!-- START CALL TO ACTION CONTENT -->
+      
+<div class="row text-white">
+  <div class="col-12 col-lg-6 gradient shadow p-3">
+      <div class="cta-info w-100">
+          <h4 class="display-4 fw-bold"> User Registration </h4>
+          <p class="lh-lg">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Id, repellendus. Praesentium quidem voluptatem ratione,
+              rerum veritatis quis perferendis tempora eius?
+          </p><br/>
+          <h3 class="display-3--brief">What will be the next step?</h3>
+        <ul class="cta-info__list">
+          <li>
+              <i class="fa-solid fa-circle-check"></i>  We'll prepare the proposal.</li>
+          <li> <i class="fa-solid fa-circle-check"></i> We'll discuss it together.</li>
+          <li> <i class="fa-solid fa-circle-check"></i> Let's start the discussion.</li>
+        </ul>
+      </div>
+  </div>
+
+  <div class="col-12 col-lg-6 bg-white shadow p-3">
+      <div class="form w-100 pb-2">
+        <h4 class="display-3--title mb-5"> Register User</h4>
+
+        {% if messages %}
+
+          {% for message in messages %}
+
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+
+          {% endfor%}
+        
+          {% endif %}
+
+        <form method="POST" action="#" class="row">
+          {% csrf_token %}
+
+          <div class="col-lg-6 col-md mb-3">
+            {% render_field form.username class="form-control" placeholder="Username" %}
+            <label for="password" class="form-label">Enter Password</label>
+          </div>
+
+            <div class="form-floating mb-3">
+              {% render_field form.password class="form-control"%}
+              
+          </div>
+      
+          <div class="form-floating mb-3">
+              {% render_field form.email class="form-control"%}
+              <label for="email" class="form-label">Email</label>
+          </div>
+          <div class="form-floating mb-3">
+              {% render_field form.phone_number class="form-control"%}
+              <label for="phone_number" class="form-label"> Phone No. </label>
+          </div>
+          <button type="submit" class="w-100 btn btn-lg btn-primary">Sign Up</button>
+            <hr class=""my-4>
+            <small class="text-muted"> Do you already have an account? <a href="{% url 'login'%}">Sign in</a></small>
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+</section>
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'index.html'%}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %} User Login {% endblock %}
+
+{% block content %}
+
+
+<section id="home" class="services ">
+    <div class="container bg-white shadow p-3 py-5">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3 mb-5 text-center"> User Login </h4>
+
+          <form method="POST" action="#" class="row g-3 align-center">
+            
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-secondary">
+                Login
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+</section>
+
+
+
+{% endblock %}

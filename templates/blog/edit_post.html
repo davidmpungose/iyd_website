@@ -5,6 +5,9 @@
 
 {% block content %}
 
+
+{% if user.is_authenticated %}
+
 <h1> Update Post...</h1>
 
 <section id="home" class="services ">
@@ -54,6 +57,12 @@
       </div>
 
 </section>
+
+{% else %}
+
+You need to first login
+
+{% endif %}
 
 
 {% endblock %}
