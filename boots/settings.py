@@ -101,15 +101,26 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # }
 
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.mysql',
-         'NAME': 'boots_website',
-         'USER': 'root',
-         'PASSWORD': 'SSD695BHsd@',
-         'HOST': 'localhost',
-         'PORT': '3306'
-     }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'boots_website',
+        'USER': 'root',
+        'PASSWORD': 'SSD695BHsd@',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    }
 }
+
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'dbd7pfpdkek31j',
+#          'USER': 'ua276a28vvk5vj',
+#          'PASSWORD': 'qpca2rkdx0lg96fff6sym4vwf8x49ma3tsv2ta52e9',
+#          'HOST': 'c9mq4861d16jlm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+#          'PORT': '5432'
+#      }
+# }
 
 
 # Password validation
@@ -175,3 +186,7 @@ EMAIL_USE_SSL = False
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
+
