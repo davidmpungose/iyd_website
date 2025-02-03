@@ -22,6 +22,22 @@ def login_user(request):
             return redirect('login')
     else:
         return render(request, 'registration/login.html')
+    
+def register_user(request):
+    if request.method == 'POST':
+        form = TenantRegistrationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.info(request, 'Account created. Please log in.')
+            return redirect('login')
+        else:
+            messages.warning(request, 'Sorry. Something went wrong.')
+            print(form.errors)
+            context = {'form': form}
+            return render(request, 'registration/register.html', context)
+    else:
+        form = TenantRegistrationForm()
+        return render(request, 'registration/register.html', {'form': form})
 
 # Create your views here.
 def index(request):
