@@ -1,0 +1,7 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.article-form {
+  width: 100%;
+  box-sizing: border-box;
+}
