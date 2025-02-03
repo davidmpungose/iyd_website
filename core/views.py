@@ -3,7 +3,25 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from .form import ContactForm
 from .models import ContactUs
+from django.contrib.auth import authenticate, login, logout
+from blog.form import TenantRegistrationForm
 from django.contrib import messages
+
+def login_user(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        user = authenticate(request, username = username, password = password)
+
+        if user is not None and user.is_active:
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.warning(request, 'Sorry. Something went wrong.')
+            return redirect('login')
+    else:
+        return render(request, 'registration/login.html')
 
 # Create your views here.
 def index(request):
