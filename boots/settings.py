@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-# DATABASES = {'default': {
-#     'ENGINE': 'django.db.backends.postgresql',
-#     **dj_database_url.config(conn_max_age=600, ssl_require=True)
-#     }               
-# }
+DATABASES = {'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    **dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }               
+}
 
 # DATABASES = {
 #     'default': {
@@ -100,16 +100,16 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'boots_website',
-        'USER': 'root',
-        'PASSWORD': 'SSD695BHsd@',
-        'HOST': 'localhost',
-        'PORT': '3306'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'boots_website',
+#         'USER': 'root',
+#         'PASSWORD': 'SSD695BHsd@',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
+#     }
+# }
 
 # DATABASES = {
 #      'default': {
