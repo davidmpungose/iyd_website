@@ -170,6 +170,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
 django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
+# STATICFILES_DIRS = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #EMAIL SETTINGS
