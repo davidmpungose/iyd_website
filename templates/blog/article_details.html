@@ -8,11 +8,13 @@
     <div class="blogs blogpost">
         <div class="post">
             <img src="{{ post.image.url }}"  alt="Blog Image">
-            
+
             <h3>{{ post.title }}</h3>
             <p>
-                {{post.content|linebreaks }}
+                {{post.content|safe }}
             </p>
+
+        
 
             {% if user.is_authenticated %}
 
@@ -22,9 +24,11 @@
 
             {% else %}
 
+            
             <a class="blue" href="#"> Read Next </a>
 
             {% endif %}
+            
             
             
         </div>
