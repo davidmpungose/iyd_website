@@ -3,7 +3,7 @@
 {% load widget_tweaks %}
 {% block title %} Blog {% endblock %}
 
-<!-- {% block content %} -->
+{% block content %}
 
   <section class="services">
       <div class="container bg-white shadow p-3 py-5">
@@ -14,35 +14,36 @@
                 <div class="row">
 
                   <div class="article-form">
+                    <form method="POST" action="{% url 'add-article' %}" class="row">  {% csrf_token %}
+
+                        <div class="col-lg-6 col-md-6 mb-3">  <label for="title" class="form-label"> Title </label>
+                            {% render_field form.title placeholder="Blog Title" class='shadow form-control form-control-lg' %}
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3">  <label for="category" class="form-label"> Category </label>
+                            {% render_field form.category placeholder="Category" class='shadow form-control form-control-lg' %}
+                        </div>
+                        <div class="col-lg-6 col-md-6 mb-3">  <label for="author" class="form-label"> Author </label>
+                            {% render_field form.author placeholder="Author" class='shadow form-control form-control-lg' %}
+                        </div>
+      
+                        <div class="col-lg-6 col-md-6 mb-3">  <label for="image" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="image" name="image">  </div>
+      
+                        <div class="col-lg-6 col-md-6 mb-3">  <label for="title_tag" class="form-label"> Blog Title Tag </label>
+                            {% render_field form.title_tag placeholder="Title Tag" class='shadow form-control form-control-lg' %}
+                        </div>
+      
+                        <div class="col-12 mb-3 py-3">  <label for="content" class="form-label"> Content </label>
+                            {% render_field form.content placeholder="Content" class='shadow form-control form-control-lg' %}
+                        </div>
+      
+                        <div class="text-center d-grid mt-1">
+                            <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">Submit</button>  </div>
+                    </form>
 
                   </div>
 
-                  <form method="POST" action="{% url 'add-article' %}" class="row">  {% csrf_token %}
-
-                    <div class="col-lg-6 col-md-6 mb-3">  <label for="title" class="form-label"> Title </label>
-                        {% render_field form.title placeholder="Blog Title" class='shadow form-control form-control-lg' %}
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-3">  <label for="category" class="form-label"> Category </label>
-                        {% render_field form.category placeholder="Category" class='shadow form-control form-control-lg' %}
-                    </div>
-                    <div class="col-lg-6 col-md-6 mb-3">  <label for="author" class="form-label"> Author </label>
-                        {% render_field form.author placeholder="Author" class='shadow form-control form-control-lg' %}
-                    </div>
-  
-                    <div class="col-lg-6 col-md-6 mb-3">  <label for="image" class="form-label">Image</label>
-                        <input type="file" class="form-control" id="image" name="image">  </div>
-  
-                    <div class="col-lg-6 col-md-6 mb-3">  <label for="title_tag" class="form-label"> Blog Title Tag </label>
-                        {% render_field form.title_tag placeholder="Title Tag" class='shadow form-control form-control-lg' %}
-                    </div>
-  
-                    <div class="col-12 mb-3 py-3">  <label for="content" class="form-label"> Content </label>
-                        {% render_field form.content placeholder="Content" class='shadow form-control form-control-lg' %}
-                    </div>
-  
-                    <div class="text-center d-grid mt-1">
-                        <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">Submit</button>  </div>
-                </form>
+                  
 
                 </div>
                 
@@ -52,4 +53,37 @@
       </div>
   </section>
 
-<!-- {% endblock %} -->
+  <!-- <section class="container article-form">
+    <form method="POST" action="{% url 'add-article' %}" class="row">  {% csrf_token %}
+
+        <div class="col-lg-6 col-md-6 mb-3">  <label for="title" class="form-label"> Title </label>
+            {% render_field form.title placeholder="Blog Title" class='shadow form-control form-control-lg' %}
+        </div>
+        <div class="col-lg-6 col-md-6 mb-3">  <label for="category" class="form-label"> Category </label>
+            {% render_field form.category placeholder="Category" class='shadow form-control form-control-lg' %}
+        </div>
+        <div class="col-lg-6 col-md-6 mb-3">  <label for="author" class="form-label"> Author </label>
+            {% render_field form.author placeholder="Author" class='shadow form-control form-control-lg' %}
+        </div>
+    
+        <div class="col-lg-6 col-md-6 mb-3">  <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" id="image" name="image">  </div>
+    
+        <div class="col-lg-6 col-md-6 mb-3">  <label for="title_tag" class="form-label"> Blog Title Tag </label>
+            {% render_field form.title_tag placeholder="Title Tag" class='shadow form-control form-control-lg' %}
+        </div>
+    
+        <div class="col-12 mb-3 py-3">  <label for="content" class="form-label"> Content </label>
+            {% render_field form.content placeholder="Content" class='shadow form-control form-control-lg' %}
+        </div>
+    
+        <div class="text-center d-grid mt-1">
+            <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">Submit</button>  </div>
+    </form>
+
+  </section> -->
+
+ 
+
+
+{% endblock %}

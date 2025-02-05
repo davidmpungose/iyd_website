@@ -2,6 +2,13 @@
 @use '../components/mixins' as *;
 
 .article-form {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
   box-sizing: border-box;
+  align-items: center;
+  // overflow: auto;
 }
