@@ -7,7 +7,8 @@
 <section id="blog-container">
     <div class="blogs blogpost">
         <div class="post">
-            <img src="{% static 'images/services/web-dev-2.jpg' %}" alt="Blog Image">
+            <img src="{{ post.image.url }}"  alt="Blog Image">
+            
             <h3>{{ post.title }}</h3>
             <p>
                 {{post.content|linebreaks }}
