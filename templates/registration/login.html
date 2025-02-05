@@ -11,15 +11,26 @@
         <div class="form w-100 pb-2">
           <h4 class="display-3 mb-5 text-center"> User Login </h4>
 
-          <form method="POST" action="#" class="row g-3 align-center">
-            
+          <form method="POST" action="#" class="row">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-secondary">
-                Login
-            </button>
+  
+            <div class="col-lg-6 col-md mb-3">
+              {% render_field form.username class="form-control" placeholder="Username" %}
+              <label for="password" class="form-label">Enter Password</label>
+            </div>
+  
+              <div class="form-floating mb-3">
+                {% render_field form.password class="form-control"%}
+                
+            </div>
+        
+            
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+              <hr class=""my-4>
 
+              <small class="text-muted"> Don't have anaccount? <a href="{% url 'register'%}">Sign Up</a></small>
           </form>
+
         </div>
       </div>
 
