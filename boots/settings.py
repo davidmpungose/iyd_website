@@ -87,11 +87,11 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    **dj_database_url.config(conn_max_age=600, ssl_require=True)
-    }               
-}
+# DATABASES = {'default': {
+#     'ENGINE': 'django.db.backends.postgresql',
+#     **dj_database_url.config(conn_max_age=600, ssl_require=True)
+#     }               
+# }
 
 # DATABASES = {
 #     'default': {
@@ -111,16 +111,16 @@ DATABASES = {'default': {
 #     }
 # }
 
-# DATABASES = {
-#      'default': {
-#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#          'NAME': 'dbd7pfpdkek31j',
-#          'USER': 'ua276a28vvk5vj',
-#          'PASSWORD': 'qpca2rkdx0lg96fff6sym4vwf8x49ma3tsv2ta52e9',
-#          'HOST': 'c9mq4861d16jlm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
-#          'PORT': '5432'
-#      }
-# }
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+         'NAME': 'dbd7pfpdkek31j',
+         'USER': 'ua276a28vvk5vj',
+         'PASSWORD': 'qpca2rkdx0lg96fff6sym4vwf8x49ma3tsv2ta52e9',
+         'HOST': 'c9mq4861d16jlm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+         'PORT': '5432'
+     }
+}
 
 
 # Password validation
