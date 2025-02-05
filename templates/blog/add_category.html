@@ -1,0 +1,27 @@
+{% extends 'index.html'%}
+{% load static %}
+{% load widget_tweaks %}
+{% block title %} {{post.title}} {% endblock %}
+
+{% block content %}
+
+<div class="article-form">
+    
+<h1>Create Category</h1>
+
+
+<form method="POST" action="{% url 'add-article' %}" class="row">  {% csrf_token %}
+
+    <div class="col-lg-6 col-md-6 mb-3">  <label for="title" class="form-label"> Title </label>
+        {% render_field form.name placeholder="New Category" class='shadow form-control form-control-lg' %}
+    </div>
+
+    <div class="text-center d-grid mt-1">
+        <button type="submit" class="btn btn-primary rounded-pill pt-3 pb-3">Add Category</button>  </div>
+</form>
+
+</div>
+
+
+
+{% endblock %}

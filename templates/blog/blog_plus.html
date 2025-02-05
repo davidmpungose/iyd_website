@@ -21,7 +21,8 @@
             <ul>
                 {% for post in object_list %}
                 <li>
-                    <img src="{% static 'images/blog/dt-1.jpg' %}" alt="Post Image">
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" width="200" height="150">  </li>
+    
                 <h3> {{post.title }}</h3>
                 <p>
                     {{post.content | truncatewords:30}}
