@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'services',
     'crispy_forms',
     'blog',
-    'widget_tweaks'
+    'widget_tweaks',
+    'ckeditor',
+
     #other apps
     
 ]

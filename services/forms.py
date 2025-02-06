@@ -1,7 +1,10 @@
 from django import forms
 from .models import BlogPost, BlogCategory
+from ckeditor.fields import RichTextField
 
 class PostForm(forms.ModelForm):
+    content = RichTextField()
+
     class Meta:
         model = BlogPost
         fields = ('title', 'category','image', 'author', 'content', 'title_tag')
@@ -20,3 +23,8 @@ class PostForm(forms.ModelForm):
             cleaned_data['category'] = new_category  # Update category in cleaned data
 
         return cleaned_data
+    
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = BlogCategory
+        fields = ['name']

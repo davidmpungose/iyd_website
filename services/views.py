@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView, DetailView, CreateView, UpdateView
 from django.contrib import messages
 from .models import BlogPost, BlogCategory
-from .forms import PostForm
+from .forms import PostForm, CategoryForm
 
 # def BlogView(request):
 #     return render(request, 'blog/uc.html')
@@ -60,29 +60,77 @@ def some_view(request):
     context = {'categories': categories}
     return render(request, 'blog_plus.html', context)
 
-@login_required  # Ensures only logged-in users can create posts
+@login_required
 def create_post(request):
+    post_form = PostForm()
+    category_form = CategoryForm()
+
     if request.method == 'POST':
-        form = PostForm(request.POST, request.FILES)  # Include uploaded files
-        if form.is_valid():
-            # Create a new BlogPost object
-            new_post = form.save(commit=False)  # Don't save yet
-            new_post.author = request.user  # Set the current user as author
+        if 'post_submit' in request.POST:  # Check if the post submit button was clicked
+            post_form = PostForm(request.POST, request.FILES)
+            if post_form.is_valid():
+                new_post = post_form.save(commit=False)
+                new_post.author = request.user
 
-            # Check if a category is selected (optional)
-            if 'category' in request.POST:
-                selected_category = request.POST['category']
-                new_post.category = BlogCategory.objects.get(pk=selected_category)
+                # Handle category selection (existing or new)
+                category_id = request.POST.get('category')
+                if category_id:
+                    new_post.category = BlogCategory.objects.get(pk=category_id)
+                else:  # No category selected, try creating a new one
+                    category_name = request.POST.get('new_category')
+                    if category_name:
+                        new_category = BlogCategory.objects.create(name=category_name)
+                        new_post.category = new_category  # Assign the newly created category
+                    else:
+                        # Handle the case where no category is selected and no new category name is provided
+                        # You might want to set a default category or display an error message
+                        messages.error(request, "Please select a category or enter a new category name.")
+                        return render(request, 'blog/add_article.html', {'form': post_form, 'category_form': category_form})
 
-            new_post.save()  # Now save the post to the database
-            messages.info(request, 'New Blog Post Added Successfully.')
+                new_post.save()
+                messages.info(request, 'New Blog Post Added Successfully.')
+                return redirect('blog-home')
+            else:
+                messages.warning(request, 'Something went wrong with the post.')
+                # Re-render the form with errors
 
-            return redirect('blog-home')  # Redirect to blog homepage after success
-        else:
-            messages.warning(request, 'Something went wrong.')
-            return redirect('blog-home')
-    else:
-        form = PostForm()
+        elif 'category_submit' in request.POST:  # Check if category form was submitted
+            category_form = CategoryForm(request.POST)
+            if category_form.is_valid():
+                category_form.save()
+                messages.info(request, 'New Category Added Successfully.')
+                return redirect('create-post')  # Redirect back to the create post page
+            else:
+                messages.warning(request, 'Something went wrong with the category.')
+                # Re-render the category form with errors
 
-    context = {'form': form}
+    context = {'form': post_form, 'category_form': category_form}
     return render(request, 'blog/add_article.html', context)
+
+@login_required
+def create_category(request): # independent view for adding a category
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Category created successfully!')
+            return redirect('blog-home')  # Redirect to wherever appropriate
+        else:
+            messages.error(request, 'Error creating category.')
+    else:
+        form = CategoryForm()
+    return render(request, 'blog/add_category.html', {'form': form})
+
+@login_required
+def create_category(request):  # Independent view for adding a category
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+        if form.is_valid():
+            form.save()  # Now this will save the category
+            messages.success(request, 'Category created successfully!')
+            return redirect('create-post')  # Redirect back to the create post page so you can see it in dropdown
+        else:
+            messages.error(request, 'Error creating category.')
+    else:
+        form = CategoryForm()
+    return render(request, 'blog/add_category.html', {'form': form})
