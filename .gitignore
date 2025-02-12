@@ -4,5 +4,6 @@
 
 .env
 staticfiles
+projenv/
 
 mydb.py
