@@ -3,5 +3,6 @@
 */*/*.pyc
 
 .env
+staticfiles
 
 mydb.py
