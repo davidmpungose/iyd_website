@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'ckeditor',
 
     #other apps
-    
+
 ]
 
 MIDDLEWARE = [
@@ -92,13 +92,13 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 # DATABASES = {'default': {
 #     'ENGINE': 'django.db.backends.postgresql',
 #     **dj_database_url.config(conn_max_age=600, ssl_require=True)
-#     }               
+#     }
 # }
 
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         **dj_database_url.config(conn_max_age=600) 
+#         **dj_database_url.config(conn_max_age=600)
 #     }
 # }
 
