@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-b$(i#jw+&pq*4a&h69fr+5(u6-#n_+v%h&bc&zoh#$r+bl98(!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #Local
+    # Local
     'core',
     'services',
     'crispy_forms',
@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'ckeditor',
 
-    #other apps
+    # other apps
 
 ]
 
@@ -102,27 +102,27 @@ WSGI_APPLICATION = 'boots.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'boots_website',
-#         'USER': 'root',
-#         'PASSWORD': 'SSD695BHsd@',
-#         'HOST': 'localhost',
-#         'PORT': '3306'
-#     }
-# }
-
 DATABASES = {
-     'default': {
-         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-         'NAME': 'dbd7pfpdkek31j',
-         'USER': 'ua276a28vvk5vj',
-         'PASSWORD': 'qpca2rkdx0lg96fff6sym4vwf8x49ma3tsv2ta52e9',
-         'HOST': 'c9mq4861d16jlm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
-         'PORT': '5432'
-     }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'boots_website',
+        'USER': 'root',
+        'PASSWORD': 'SSD695BHsd@',
+        'HOST': 'localhost',
+        'PORT': '3306'
+    }
 }
+
+# DATABASES = {
+#      'default': {
+#          'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#          'NAME': 'dbd7pfpdkek31j',
+#          'USER': 'ua276a28vvk5vj',
+#          'PASSWORD': 'qpca2rkdx0lg96fff6sym4vwf8x49ma3tsv2ta52e9',
+#          'HOST': 'c9mq4861d16jlm.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
+#          'PORT': '5432'
+#      }
+# }
 
 
 # Password validation
@@ -164,7 +164,8 @@ STATIC_URL = '/assets/'
 # Location where Django collects all static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = os.path.join('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATICFILES_STORAGE = os.path.join(
+    'whitenoise.storage.CompressedManifestStaticFilesStorage')
 
 # Location where we will store our static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'assets')]
@@ -175,7 +176,7 @@ MEDIA_URL = '/media/'
 # STATICFILES_DIRS = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#EMAIL SETTINGS
+# EMAIL SETTINGS
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
@@ -192,4 +193,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-
