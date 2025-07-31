@@ -26,7 +26,6 @@ django-ckeditor-5==0.2.15
 django-clearcache==1.2.1
 django-cors-headers==4.4.0
 django-crispy-forms==2.3
-django-heroku==0.3.1
 django-js-asset==3.0.1
 django-rest-framework==0.1.0
 django-templated-mail==1.1.1
